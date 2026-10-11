@@ -5,7 +5,7 @@
 - Godot crash course and general useful information: https://youtu.be/q7wlSvt0JIc?si=-571ViIfSVueNXgH
 
 ### Preview Sample Game Link
-[TBD]
+https://jdk0413.itch.io/simpleminer
 
 ### Video For Sample Game
 [TBD]
