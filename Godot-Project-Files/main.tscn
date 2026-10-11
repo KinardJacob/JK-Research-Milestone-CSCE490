@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://dt2ofan62emnk" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bo2p2vpqbesi2" path="res://mining/Untitled.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://rkcgsb6nfyuy" path="res://mining/Untitled2.png" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cta36mngmva1h" path="res://mining/Untitled3.png" id="3_lquwl"]
@@ -51,6 +52,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1bvp3")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=964755083]
 layout_mode = 1
@@ -93,6 +95,10 @@ theme_override_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/MineSpace/MarginContainer" unique_id=15106299]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/MineSpace/MarginContainer/VBoxContainer" unique_id=1826963290]
+layout_mode = 2
+horizontal_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/MineSpace/MarginContainer/VBoxContainer" unique_id=1300302859]
 texture_filter = 1
 layout_mode = 2
@@ -114,3 +120,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_j2owy")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2118080671]
 root_node = NodePath("../MarginContainer/PanelContainer/MarginContainer/HBoxContainer/MineSpace/MarginContainer/VBoxContainer/TextureRect")
 libraries/ = SubResource("AnimationLibrary_5vw27")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/MineSpace/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
