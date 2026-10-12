@@ -8,4 +8,4 @@
 https://jdk0413.itch.io/simpleminer
 
 ### Video For Sample Game
-[TBD]
+https://youtu.be/Ya9EbVvNCSc
